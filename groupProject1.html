@@ -1,10 +1,12 @@
+<!-- John Baadsgard, Shad Baird, Danny Naylor, Mark Trammell -->
+<!-- Project 1 - Group Assignment -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Calculator</title>
 
     <script>
         function round(value, decimals)
@@ -13,6 +15,7 @@
         }
         function calcGPA()
         {
+            // hello
             //create a variable for each input
             var is201Grade = parseInt(document.getElementById("is201").value);
             var is303Grade = parseInt(document.getElementById("is303").value);
@@ -85,9 +88,9 @@
                 //score for three other business classes (averaged) is 20% of GPA
                 fTotalGPA += ((grades[2] + grades[3] + grades[4])/3)*.2;
                 //overall gpa counts for 20% of total gpa
-                fTotalGPA += (parseInt(overallGPAvalue))*.2
+                fTotalGPA += (overallGPAvalue)*.2
                 //last 30 credits counts as 20% of total gpa
-                fTotalGPA += (parseInt(last30creditsValue))*.2
+                fTotalGPA += (last30creditsValue)*.2
                 //round GPA to two decimal places
                 fTotalGPA = round(fTotalGPA, 2);
                 document.getElementById("totGPA").innerHTML = fTotalGPA;
@@ -124,7 +127,7 @@
 </head>
 <body onload="focusOn201()">
     <p>
-        Program Overview
+        Program Overview<br><br>
 
 The BS Information Systems program is available as a four-year traditional degree or as a five-year integrated option where students earn both the BS IS and MISM degrees. The BS IS program is a 64-credit degree including pre-management, junior core, management core, and a capstone.
 
