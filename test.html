@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displaySelected() {
+            document.getElementById('is201').selectedIndex = "2";
+        }
+    </script>
+</head>
+<body>
+    <select name="test" id="is201">
+        <option value="1">A</option>
+        <option value="2" selected>B</option>
+        <option value="3">C</option>
+        <option value="4">D</option>
+    </select>
+    <input type="button" value="Click" onclick="displaySelected()">
+    <p id="output"></p>
+</body>
+</html>

@@ -15,13 +15,9 @@ main {
     width: 58rem;
 }
 
-img {
-    width: 100%;
-    object-fit: cover;
-}
-
 header img {
     height: 90vh;
+    width: 100vw;
     position: relative;
     object-fit: cover;
 }
@@ -126,6 +122,9 @@ span label {
     outline: none;
 }
 
+#totGPA {
+    font-size: 2rem;
+}
 
 footer {
     padding: 4rem 0 1rem 0;

@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    
+
     <script>
       function round(value, decimals) {
         return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
@@ -133,14 +133,39 @@
           document.getElementById("myCircle").style.fill = "yellow";
         } else if (fTotalGPA > 0) {
           document.getElementById("myCircle").style.fill = "red";
-        } else { //don't show any circle if no data was entered
+        } else {
+          //don't show any circle if no data was entered
           document.getElementById("myCircle").style.display = "none";
         }
       }
-      function clearForm() {
-        document.getElementById("myForm").reset();
+
+      function clearCircle() {
         document.getElementById("myCircle").style.display = "none";
+        document.getElementById("myCircle").style.fill = "none";
+        let checkBoxes = document.getElementsByClassName("checkbox");
+        console.log(checkBoxes);
+        
+        for(i in checkBoxes){
+            console.log(checkBoxes[i].id);
+            if(checkBoxes[i].id != null) {
+                document.getElementById(checkBoxes[i].id).checked = false;
+            }
+        }
+        let selections = document.getElementsByTagName("select");
+        for(i in selections){
+            if(selections[i].id != null){
+                document.getElementById(selections[i].id).selectedIndex = "0";
+            }
+        }
+        let textFields = document.getElementsByClassName("textField");
+        for(i in textFields){
+            if(textFields[i].id != null){
+                document.getElementById(textFields[i].id).value = "";
+            }
+        }
+
         document.getElementById("totGPA").innerHTML = "";
+        
         focusOn201();
       }
       function focusOn201() {
@@ -189,134 +214,138 @@
 
     <!--create the form that will gather all the necessary information to calculate GPA-->
     <div>
-      <form id="myForm">
-        <div class="formRow">
-          <label for="is201">IS 201</label>
-          <select id="is201">
-            <option value="4">A</option>
-            <option value="3.7">A-</option>
-            <option value="3.4">B+</option>
-            <option value="3">B</option>
-            <option value="2.7">B-</option>
-            <option value="2.4">C+</option>
-            <option value="2">C</option>
-            <option value="1.7">C-</option>
-            <option value="1.4">D+</option>
-            <option value="1">D</option>
-            <option value=".7">D-</option>
-            <option value="0">E</option>
-          </select>
-          <span>
-            <input type="checkbox" id="is201check" />
-            <label for="is201check">Retake</label>
-          </span>
-        </div>
-        <div class="formRow">
-          <label for="is303">IS 303</label>
-          <select id="is303">
-            <option value="4">A</option>
-            <option value="3.7">A-</option>
-            <option value="3.4">B+</option>
-            <option value="3">B</option>
-            <option value="2.7">B-</option>
-            <option value="2.4">C+</option>
-            <option value="2">C</option>
-            <option value="1.7">C-</option>
-            <option value="1.4">D+</option>
-            <option value="1">D</option>
-            <option value=".7">D-</option>
-            <option value="0">E</option>
-          </select>
-          <span>
-            <input type="checkbox" id="is303check" />
-            <label for="is303check">Retake</label>
-          </span>
-        </div>
-        <div class="formRow">
-          <label for="acc200">ACC 200</label>
-          <select id="acc200">
-            <option value="4">A</option>
-            <option value="3.7">A-</option>
-            <option value="3.4">B+</option>
-            <option value="3">B</option>
-            <option value="2.7">B-</option>
-            <option value="2.4">C+</option>
-            <option value="2">C</option>
-            <option value="1.7">C-</option>
-            <option value="1.4">D+</option>
-            <option value="1">D</option>
-            <option value=".7">D-</option>
-            <option value="0">E</option>
-          </select>
-          <span>
-            <input type="checkbox" id="acc200check" />
-            <label for="acc200check">Retake</label>
-          </span>
-        </div>
-        <div class="formRow">
-          <label for="fin201">FIN 201</label>
-          <select id="fin201">
-            <option value="4">A</option>
-            <option value="3.7">A-</option>
-            <option value="3.4">B+</option>
-            <option value="3">B</option>
-            <option value="2.7">B-</option>
-            <option value="2.4">C+</option>
-            <option value="2">C</option>
-            <option value="1.7">C-</option>
-            <option value="1.4">D+</option>
-            <option value="1">D</option>
-            <option value=".7">D-</option>
-            <option value="0">E</option>
-          </select>
-          <span>
-            <input type="checkbox" id="fin201check" />
-            <label for="fin201check">Retake</label>
-          </span>
-        </div>
-        <div class="formRow">
-          <label for="mktg201">MKTG 201</label>
-          <select id="mktg201">
-            <option value="4">A</option>
-            <option value="3.7">A-</option>
-            <option value="3.4">B+</option>
-            <option value="3">B</option>
-            <option value="2.7">B-</option>
-            <option value="2.4">C+</option>
-            <option value="2">C</option>
-            <option value="1.7">C-</option>
-            <option value="1.4">D+</option>
-            <option value="1">D</option>
-            <option value=".7">D-</option>
-            <option value="0">E</option>
-          </select>
-          <span>
-            <input type="checkbox" id="mktg201check" />
-            <label for="mktg201check">Retake</label>
-          </span>
-        </div>
-        <div class="formRow">
-          <label for="overallGPA">Overall GPA:</label>
-          <input type="text" id="overallGPA" /><br />
-        </div>
-        <div class="formRow">
-          <label for="last30credits">BYU Last 30 Credits GPA:</label>
-          <input type="text" id="last30credits" />
-        </div>
-        <div class="formRow">
-          <input
-            class="button"
-            type="button"
-            id="calculate"
-            value="Calculate"
-            onclick="colorCircle(calcGPA())"
-          />
-          <input class="button" type="reset" onclick="clearForm()" />
-        </div>
-      </form>
+      <div class="formRow">
+        <label for="is201">IS 201</label>
+        <select id="is201">
+          <option value=" "></option>
+          <option value="4" selected>A</option>
+          <option value="3.7">A-</option>
+          <option value="3.4">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.4">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.4">D+</option>
+          <option value="1">D</option>
+          <option value=".7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <span>
+          <input type="checkbox" id="is201check" class="checkbox"/>
+          <label for="is201check">Retake</label>
+        </span>
+      </div>
+      <div class="formRow">
+        <label for="is303">IS 303/CS 142</label>
+        <select id="is303">
+          <option value=" "></option>
+          <option value="4" selected>A</option>
+          <option value="3.7">A-</option>
+          <option value="3.4">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.4">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.4">D+</option>
+          <option value="1">D</option>
+          <option value=".7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <span>
+          <input type="checkbox" id="is303check" class="checkbox"/>
+          <label for="is303check">Retake</label>
+        </span>
+      </div>
+      <div class="formRow">
+        <label for="acc200">ACC 200</label>
+        <select id="acc200">
+          <option value=" "></option>
+          <option value="4" selected>A</option>
+          <option value="3.7">A-</option>
+          <option value="3.4">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.4">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.4">D+</option>
+          <option value="1">D</option>
+          <option value=".7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <span>
+          <input type="checkbox" id="acc200check" class="checkbox"/>
+          <label for="acc200check">Retake</label>
+        </span>
+      </div>
+      <div class="formRow">
+        <label for="fin201">FIN 201</label>
+        <select id="fin201">
+          <option value=" "></option>
+          <option value="4" selected>A</option>
+          <option value="3.7">A-</option>
+          <option value="3.4">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.4">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.4">D+</option>
+          <option value="1">D</option>
+          <option value=".7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <span>
+          <input type="checkbox" id="fin201check" class="checkbox"/>
+          <label for="fin201check">Retake</label>
+        </span>
+      </div>
+      <div class="formRow">
+        <label for="mktg201">MKTG 201</label>
+        <select id="mktg201">
+          <option value=" "></option>
+          <option value="4" selected>A</option>
+          <option value="3.7">A-</option>
+          <option value="3.4">B+</option>
+          <option value="3">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.4">C+</option>
+          <option value="2">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.4">D+</option>
+          <option value="1">D</option>
+          <option value=".7">D-</option>
+          <option value="0">E</option>
+        </select>
+        <span>
+          <input type="checkbox" id="mktg201check" class="checkbox"/>
+          <label for="mktg201check">Retake</label>
+        </span>
+      </div>
+      <div class="formRow">
+        <label for="overallGPA">Overall GPA:</label>
+        <input type="text" id="overallGPA" class="textField"/>
+      </div>
+      <div class="formRow">
+        <label for="last30credits">BYU Last 30 Credits GPA:</label>
+        <input type="text" id="last30credits" class="textField"/>
+      </div>
+      <div class="formRow">
+        <input
+          class="button"
+          type="button"
+          id="calculate"
+          value="Calculate"
+          onclick="colorCircle(calcGPA())"
+        />
+        <input class="button" type="reset" onclick="clearCircle()" />
+      </div>
     </div>
 
     <p id="totGPA"></p>
+
     <svg width="100" height="100">
       <circle
         id="myCircle"
@@ -330,20 +359,26 @@
       />
     </svg>
     <aside>
-        <p>Learn more about the program at their website:<a class="button" href="https://marriottschool.byu.edu/infosys/">BYU IS</a></p>
+      <p>
+        Learn more about the program at their website:<a
+          class="button"
+          href="https://marriottschool.byu.edu/infosys/"
+          >BYU IS</a
+        >
+      </p>
     </aside>
     <footer>
-      <span
-        >Photo by
+      <p
+        >Photo by 
         <a
           href="https://unsplash.com/@christopher__burns?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-          >Christopher Burns</a
+          > Christopher Burns </a
         >
         on
         <a
           href="https://unsplash.com/s/photos/tech?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
-          >Unsplash</a
-        ></span
+          > Unsplash </a
+        ></p
       >
     </footer>
   </body>
