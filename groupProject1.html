@@ -10,6 +10,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
       function round(value, decimals) {
@@ -142,132 +146,176 @@
       }
     </script>
   </head>
+
   <body onload="focusOn201()">
-    <h2>Program Overview</h2>
+    <header>
+      <img src="images/hero_1600w.jpg" alt="some techy cover image" />
+      <h1>BYU Information Systems</h1>
+    </header>
+    <main>
+      <h2>Program Overview</h2>
 
-    <p>
-      The BS Information Systems program is available as a four-year traditional
-      degree or as a five-year integrated option where students earn both the BS
-      IS and MISM degrees. The BS IS program is a 64-credit degree including
-      pre-management, junior core, management core, and a capstone.
-    </p>
+      <p>
+        The
+        <a href="https://marriottschool.byu.edu/infosys/"
+          >BS Information Systems program</a
+        >
+        is available as a four-year traditional degree or as a five-year
+        integrated option where students earn both the BS IS and MISM degrees.
+        The BS IS program is a 64-credit degree including pre-management, junior
+        core, management core, and a capstone.
+      </p>
 
-    <h2>Curriculum</h2>
+      <h2>Curriculum</h2>
 
-    <p>
-      Information systems students learn to define, develop, and maintain the
-      information system infrastructure that supports the operations of all
-      businesses, governments, and other institutions. The BS Information
-      Systems degree develops the ability to function effectively as a
-      professional, applying state-of-the-art technology in solving business
-      problems. Students are trained in business and information systems and
-      taught to understand complex business environments. Built on a solid
-      foundation of business courses, the curriculum advances students’
-      understanding of technologies in the design and development of information
-      systems. They gain technical expertise in systems analysis; systems design
-      and implementation; database development and management; programming;
-      telecommunications networking; 2-tier, 3-tier, and n-tier application
-      development; and web application development.
-    </p>
+      <p>
+        Information systems students learn to define, develop, and maintain the
+        information system infrastructure that supports the operations of all
+        businesses, governments, and other institutions. The BS Information
+        Systems degree develops the ability to function effectively as a
+        professional, applying state-of-the-art technology in solving business
+        problems. Students are trained in business and information systems and
+        taught to understand complex business environments. Built on a solid
+        foundation of business courses, the curriculum advances students’
+        understanding of technologies in the design and development of
+        information systems. They gain technical expertise in systems analysis;
+        systems design and implementation; database development and management;
+        programming; telecommunications networking; 2-tier, 3-tier, and n-tier
+        application development; and web application development.
+      </p>
+    </main>
+
     <!--create the form that will gather all the necessary information to calculate GPA-->
-    <form id="myForm">
-      <label for="is201">IS 201</label>
-      <select id="is201">
-        <option value="4">A</option>
-        <option value="3.7">A-</option>
-        <option value="3.4">B+</option>
-        <option value="3">B</option>
-        <option value="2.7">B-</option>
-        <option value="2.4">C+</option>
-        <option value="2">C</option>
-        <option value="1.7">C-</option>
-        <option value="1.4">D+</option>
-        <option value="1">D</option>
-        <option value=".7">D-</option>
-        <option value="0">E</option>
-      </select>
-      <input type="checkbox" id="is201check" />
-      <label for="is201check">Retake</label><br />
-      <label for="is303">IS 303</label>
-      <select id="is303">
-        <option value="4">A</option>
-        <option value="3.7">A-</option>
-        <option value="3.4">B+</option>
-        <option value="3">B</option>
-        <option value="2.7">B-</option>
-        <option value="2.4">C+</option>
-        <option value="2">C</option>
-        <option value="1.7">C-</option>
-        <option value="1.4">D+</option>
-        <option value="1">D</option>
-        <option value=".7">D-</option>
-        <option value="0">E</option>
-      </select>
-      <input type="checkbox" id="is303check" />
-      <label for="is303check">Retake</label><br />
-      <label for="acc200">ACC 200</label>
-      <select id="acc200">
-        <option value="4">A</option>
-        <option value="3.7">A-</option>
-        <option value="3.4">B+</option>
-        <option value="3">B</option>
-        <option value="2.7">B-</option>
-        <option value="2.4">C+</option>
-        <option value="2">C</option>
-        <option value="1.7">C-</option>
-        <option value="1.4">D+</option>
-        <option value="1">D</option>
-        <option value=".7">D-</option>
-        <option value="0">E</option>
-      </select>
-      <input type="checkbox" id="acc200check" />
-      <label for="acc200check">Retake</label><br />
-      <label for="fin201">FIN 201</label>
-      <select id="fin201">
-        <option value="4">A</option>
-        <option value="3.7">A-</option>
-        <option value="3.4">B+</option>
-        <option value="3">B</option>
-        <option value="2.7">B-</option>
-        <option value="2.4">C+</option>
-        <option value="2">C</option>
-        <option value="1.7">C-</option>
-        <option value="1.4">D+</option>
-        <option value="1">D</option>
-        <option value=".7">D-</option>
-        <option value="0">E</option>
-      </select>
-      <input type="checkbox" id="fin201check" />
-      <label for="fin201check">Retake</label><br />
-      <label for="mktg201">MKTG 201</label>
-      <select id="mktg201">
-        <option value="4">A</option>
-        <option value="3.7">A-</option>
-        <option value="3.4">B+</option>
-        <option value="3">B</option>
-        <option value="2.7">B-</option>
-        <option value="2.4">C+</option>
-        <option value="2">C</option>
-        <option value="1.7">C-</option>
-        <option value="1.4">D+</option>
-        <option value="1">D</option>
-        <option value=".7">D-</option>
-        <option value="0">E</option>
-      </select>
-      <input type="checkbox" id="mktg201check" />
-      <label for="mktg201check">Retake</label><br />
-      <label for="overallGPA">Overall GPA:</label>
-      <input type="text" id="overallGPA" /><br />
-      <label for="last30credits">BYU Last 30 Credits GPA:</label>
-      <input type="text" id="last30credits" /><br />
-      <input
-        type="button"
-        id="calculate"
-        value="Calculate"
-        onclick="colorCircle(calcGPA())"
-      /><br />
-      <input type="reset" onclick="clearForm()" />
-    </form>
+    <div>
+      <form id="myForm">
+        <div class="formRow">
+          <label for="is201">IS 201</label>
+          <select id="is201">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.4">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.4">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.4">D+</option>
+            <option value="1">D</option>
+            <option value=".7">D-</option>
+            <option value="0">E</option>
+          </select>
+          <span>
+            <input type="checkbox" id="is201check" />
+          <label for="is201check">Retake</label>  
+          </span>
+          
+        </div>
+        <div class="formRow">
+          <label for="is303">IS 303</label>
+          <select id="is303">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.4">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.4">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.4">D+</option>
+            <option value="1">D</option>
+            <option value=".7">D-</option>
+            <option value="0">E</option>
+          </select>
+          <span>
+            <input type="checkbox" id="is303check" />
+          <label for="is303check">Retake</label>  
+          </span>
+          
+        </div>
+        <div class="formRow">
+          <label for="acc200">ACC 200</label>
+          <select id="acc200">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.4">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.4">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.4">D+</option>
+            <option value="1">D</option>
+            <option value=".7">D-</option>
+            <option value="0">E</option>
+          </select>
+          <span>
+            <input type="checkbox" id="acc200check" />
+            <label for="acc200check">Retake</label>
+          </span>
+        </div>
+        <div class="formRow">
+          <label for="fin201">FIN 201</label>
+          <select id="fin201">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.4">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.4">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.4">D+</option>
+            <option value="1">D</option>
+            <option value=".7">D-</option>
+            <option value="0">E</option>
+          </select>
+          <span>
+            <input type="checkbox" id="fin201check" />
+            <label for="fin201check">Retake</label>
+          </span>
+        </div>
+        <div class="formRow">
+          <label for="mktg201">MKTG 201</label>
+          <select id="mktg201">
+            <option value="4">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.4">B+</option>
+            <option value="3">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.4">C+</option>
+            <option value="2">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.4">D+</option>
+            <option value="1">D</option>
+            <option value=".7">D-</option>
+            <option value="0">E</option>
+          </select>
+          <span>
+            <input type="checkbox" id="mktg201check" />
+            <label for="mktg201check">Retake</label>
+          </span>
+        </div>
+        <div class="formRow">
+          <label for="overallGPA">Overall GPA:</label>
+          <input type="text" id="overallGPA" /><br />
+        </div>
+        <div class="formRow">
+          <label for="last30credits">BYU Last 30 Credits GPA:</label>
+          <input type="text" id="last30credits" />
+        </div>
+        <div class="formRow">
+          <input
+            class="button"
+            type="button"
+            id="calculate"
+            value="Calculate"
+            onclick="colorCircle(calcGPA())"
+          />
+          <input class="button" type="reset" onclick="clearForm()" />
+        </div>
+      </form>
+    </div>
+
     <p id="totGPA"></p>
     <svg width="100" height="100">
       <circle
@@ -281,5 +329,22 @@
         display="none"
       />
     </svg>
+    <aside>
+        <p>Learn more about the program at their website:<a class="button" href="https://marriottschool.byu.edu/infosys/">BYU IS</a></p>
+    </aside>
+    <footer>
+      <span
+        >Photo by
+        <a
+          href="https://unsplash.com/@christopher__burns?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+          >Christopher Burns</a
+        >
+        on
+        <a
+          href="https://unsplash.com/s/photos/tech?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+          >Unsplash</a
+        ></span
+      >
+    </footer>
   </body>
 </html>
