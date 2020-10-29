@@ -27,6 +27,7 @@ header {
 }
 
 h1 {
+    /* Title overlay on image */
     position: absolute;
     align-self: center;
     left: 50%;
@@ -64,22 +65,24 @@ a.button {
 }
 
 .formRow {
+    /* This is for each div containing a label, dropdown menu, checkbox, and label */
     width: 30vw;
     padding: 1rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: solid 1px red; */
 
 }
 
 select {
     position: absolute;
+    /* A hack to center the dropdown menus */
     left: 50%;
     transform: translateX(-50%);
 }
 
 span {
+    /* vertically centers the checkbox and label */
     display: flex;
     align-items: center;
 }
@@ -89,6 +92,7 @@ span label {
 }
 
 .button {
+    /* makes all the buttons quite stylish */
     display: inline-block;
     user-select: none;
     width: 10rem;

@@ -1,5 +1,6 @@
 <!-- John Baadsgard, Shad Baird, Danny Naylor, Mark Trammell -->
 <!-- Project 1 - A program to predict one's likelihood of being accepted into the BSIS program based on the department's algorithm -->
+<!--Note: we did not use an HTML form because it seems impossible to use the select.selectedItem method when the select is contained within a form-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -140,13 +141,15 @@
       }
 
       function clearCircle() {
+        //gets rid of the SVG (for now)
         document.getElementById("myCircle").style.display = "none";
         document.getElementById("myCircle").style.fill = "none";
-        let checkBoxes = document.getElementsByClassName("checkbox");
-        console.log(checkBoxes);
         
+        //These 3 loops grab all three groups of inputs and resets them. 
+        /* This approach was necessary because resetting the select options
+        did not work when everything was contained in a form. */
+        let checkBoxes = document.getElementsByClassName("checkbox"); 
         for(i in checkBoxes){
-            console.log(checkBoxes[i].id);
             if(checkBoxes[i].id != null) {
                 document.getElementById(checkBoxes[i].id).checked = false;
             }
@@ -163,11 +166,12 @@
                 document.getElementById(textFields[i].id).value = "";
             }
         }
-
+        //reset the cumulative gpa
         document.getElementById("totGPA").innerHTML = "";
-        
+        //set the focus on is201
         focusOn201();
       }
+      //Resets the focus on the IS201 select
       function focusOn201() {
         document.getElementById("is201").focus();
       }
