@@ -1,3 +1,5 @@
+<!-- John Baadsgard, Shad Baird, Danny Naylor, Mark Trammell -->
+<!-- Project 1 - A program to predict one's likelihood of being accepted into the BSIS program based on the department's algorithm -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
+
+
 
     <script>
       function round(value, decimals) {
@@ -131,7 +135,7 @@
           document.getElementById("myCircle").style.fill = "yellow";
         } else if (fTotalGPA > 0) {
           document.getElementById("myCircle").style.fill = "red";
-        } else {
+        } else { //don't show any circle if no data was entered
           document.getElementById("myCircle").style.display = "none";
         }
       }
@@ -146,6 +150,7 @@
       }
     </script>
   </head>
+
 
   <body onload="focusOn201()">
     <header>
