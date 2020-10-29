@@ -24,11 +24,11 @@
       }
       function calcGPA() {
         //create a variable for each input
-        var is201Grade = parseInt(document.getElementById("is201").value);
-        var is303Grade = parseInt(document.getElementById("is303").value);
-        var acc200Grade = parseInt(document.getElementById("acc200").value);
-        var fin201Grade = parseInt(document.getElementById("fin201").value);
-        var mktg201Grade = parseInt(document.getElementById("mktg201").value);
+        var is201Grade = parseFloat(document.getElementById("is201").value);
+        var is303Grade = parseFloat(document.getElementById("is303").value);
+        var acc200Grade = parseFloat(document.getElementById("acc200").value);
+        var fin201Grade = parseFloat(document.getElementById("fin201").value);
+        var mktg201Grade = parseFloat(document.getElementById("mktg201").value);
         var overallGPAvalue = document.getElementById("overallGPA").value;
         var last30creditsValue = document.getElementById("last30credits").value;
         var is201Retake = document.getElementById("is201check").checked;
@@ -116,9 +116,9 @@
           //score for three other business classes (averaged) is 20% of GPA
           fTotalGPA += ((grades[2] + grades[3] + grades[4]) / 3) * 0.2;
           //overall gpa counts for 20% of total gpa
-          fTotalGPA += parseInt(overallGPAvalue) * 0.2;
+          fTotalGPA += parseFloat(overallGPAvalue) * 0.2;
           //last 30 credits counts as 20% of total gpa
-          fTotalGPA += parseInt(last30creditsValue) * 0.2;
+          fTotalGPA += parseFloat(last30creditsValue) * 0.2;
           //round GPA to two decimal places
           fTotalGPA = round(fTotalGPA, 2);
           document.getElementById("totGPA").innerHTML = fTotalGPA;
