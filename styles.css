@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     width: 58rem;
 }
 
@@ -43,7 +43,6 @@ h1 {
 h1,
 h2 {
     font-family: 'Work Sans', sans-serif;
-
 }
 
 a {
