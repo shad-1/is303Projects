@@ -55,13 +55,19 @@
         ];
         //check if the user has entered information
         //if one of these has an empty string, we should display the alert
-        if (overallGPAvalue === "" || last30creditsValue === "" || is201Grade === NaN || is303Grade === NaN || acc200Grade === NaN || fin201Grade === NaN || mktg201Grade === NaN) 
-        {
-          alert(
-            "You must select an item in each drop down and enter a value in the GPA text boxes!"
-          );
-          focusOn201();
-        }
+        if (overallGPAvalue === "" || 
+            last30creditsValue === "" || 
+            isNaN(is201Grade)===true || 
+            isNaN(is303Grade)===true || 
+            isNaN(acc200Grade)===true || 
+            isNaN(fin201Grade)===true || 
+            isNaN(mktg201Grade)===true) 
+          {
+            alert(
+              "You must select an item in each drop down and enter a value in the GPA text boxes!"
+            );
+            focusOn201();
+          }
         //if they have entered the data, then we can calculate everything else
         else {
           //use a loop to adjust scores for retake classes
