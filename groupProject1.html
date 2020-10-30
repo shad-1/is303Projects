@@ -54,9 +54,9 @@
           mktg201Retake,
         ];
         //check if the user has entered information
-        //the select boxes automatically have an 'A' entered, so we only need to check GPA and last 30 credits
         //if one of these has an empty string, we should display the alert
-        if (overallGPAvalue === "" || last30creditsValue === "") {
+        if (overallGPAvalue === "" || last30creditsValue === "" || is201Grade === NaN || is303Grade === NaN || acc200Grade === NaN || fin201Grade === NaN || mktg201Grade === NaN) 
+        {
           alert(
             "You must select an item in each drop down and enter a value in the GPA text boxes!"
           );
